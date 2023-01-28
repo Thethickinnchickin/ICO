@@ -804,7 +804,7 @@ export const TOKEN_CONTRACT_ABI = [
   },
   {
     "inputs": [],
-    "name": "maxTotolSupply",
+    "name": "maxTotalSupply",
     "outputs": [
       {
         "internalType": "uint256",
@@ -813,6 +813,19 @@ export const TOKEN_CONTRACT_ABI = [
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "mint",
+    "outputs": [],
+    "stateMutability": "payable",
     "type": "function"
   },
   {
