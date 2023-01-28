@@ -290,6 +290,9 @@ export default function Home() {
     }
   };
 
+   // useEffects are used to react to changes in state of the website
+  // The array at the end of function call represents what state changes will trigger this effect
+  // In this case, whenever the value of `walletConnected` changes - this effect will be called
   useEffect(() => {
     // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
     if (!walletConnected) {
@@ -308,6 +311,9 @@ export default function Home() {
     }
   }, [walletConnected]);
 
+  /*
+        renderButton: Returns a button based on the state of the dapp
+      */
   const renderButton = () => {
     // If we are currently waiting for something, return a loading button
     if (loading) {
@@ -352,9 +358,9 @@ export default function Home() {
         </button>
       </div>
     );
-  }
-  
-  return(
+  };
+
+  return (
     <div>
       <Head>
         <title>Crypto Devs</title>
@@ -363,7 +369,7 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div>
-        <h1 className={styles.title}>Welcome to Crypto Devs ICO!</h1>
+          <h1 className={styles.title}>Welcome to Crypto Devs ICO!</h1>
           <div className={styles.description}>
             You can claim or mint Crypto Dev tokens here
           </div>
